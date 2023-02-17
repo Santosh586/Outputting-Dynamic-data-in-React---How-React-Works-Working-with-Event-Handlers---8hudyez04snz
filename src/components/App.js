@@ -1,18 +1,14 @@
 import React,{useState,useEffect} from 'react'
 import '../styles/App.css';
+const App = () => {
 //code here
-function App() {
-  const [name, setName] = useState('');
-
-  const handleClick = () => {
-    const input = document.querySelector('#input');
-    setName(input.value);
-  };
+  const [input, setInput] = useState('');
+  const [blank, setBlank] = useState('__');
   return (
     <div id="main">
-      <input id='input' onChange={}></input>
-      <button id='button' onClick={}>Click</button>
-      <p id='text'> Hello my name is ____ and I study at Newton School</p>
+      <input id='input' onChange={(e) => setInput(e.target.value)}></input>
+      <button id='button' onClick={() => setBlank(input)}>Click</button>
+      <p id='text'> Hello my name is {blank} and I study at Newton School</p>
     </div>
   )
 }
