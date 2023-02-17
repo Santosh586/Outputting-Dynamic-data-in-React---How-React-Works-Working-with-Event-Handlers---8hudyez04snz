@@ -1,7 +1,13 @@
 import React,{useState,useEffect} from 'react'
 import '../styles/App.css';
-const App = () => {
 //code here
+function App() {
+  const [name, setName] = useState('');
+
+  const handleClick = () => {
+    const input = document.querySelector('#input');
+    setName(input.value);
+  };
   return (
     <div id="main">
       <input id='input' onChange={}></input>
